@@ -241,13 +241,13 @@ export default function HomePage() {
       {/* STATS */}
       <div className="stats-strip">
         {([
-          { bg:"rgba(124,58,237,0.10)", num:"Any", label:"Language, powered by AI" },
-          { bg:"rgba(16,185,129,0.10)", num:"<1s", label:"To log a transaction" },
-          { bg:"rgba(245,158,11,0.10)", num:"Free", label:"Forever plan, no card needed" },
-          { bg:"rgba(59,130,246,0.10)", num:"Zero", label:"Bank connections required" },
-        ] as const).map(({ bg, num, label }) => (
+          { bg:"rgba(124,58,237,0.10)", color:"#7C3AED", num:"Any", label:"Language, powered by AI", icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg> },
+          { bg:"rgba(16,185,129,0.10)", color:"#059669", num:"<1s", label:"To log a transaction", icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> },
+          { bg:"rgba(245,158,11,0.10)", color:"#D97706", num:"Free", label:"Forever plan, no card needed", icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> },
+          { bg:"rgba(59,130,246,0.10)", color:"#2563EB", num:"Zero", label:"Bank connections required", icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> },
+        ] as const).map(({ bg, color, num, label, icon }) => (
           <div key={num} className="stat-item">
-            <div className="stat-icon" style={{ background: bg }} />
+            <div className="stat-icon" style={{ background: bg, color }}>{icon}</div>
             <div className="stat-num">{num}</div>
             <div className="stat-label">{label}</div>
           </div>
