@@ -153,7 +153,7 @@ export default function ContactPage() {
         <div className="contact-info">
           <div className="info-card">
             <div className="info-card-label">Email</div>
-            <div className="info-card-value"><a href="mailto:support@justlog.ai">support@justlog.ai</a></div>
+            <div className="info-card-value"><a href="mailto:support@justlog.live">support@justlog.live</a></div>
           </div>
           <div className="info-card">
             <div className="info-card-label">Response time</div>

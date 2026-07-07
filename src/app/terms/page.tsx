@@ -76,7 +76,7 @@ export default function TermsPage() {
           <ul>
             <li>You are responsible for keeping your credentials secure</li>
             <li>You are responsible for all activity under your account</li>
-            <li>Notify us immediately at <a href="mailto:support@justlog.ai">support@justlog.ai</a> if you suspect unauthorised access</li>
+            <li>Notify us immediately at <a href="mailto:support@justlog.live">support@justlog.live</a> if you suspect unauthorised access</li>
             <li>We may suspend accounts that violate these Terms</li>
           </ul>
         </div>
@@ -132,7 +132,7 @@ export default function TermsPage() {
 
         <div className="section">
           <h2>11. Contact</h2>
-          <p>For questions about these Terms, email <a href="mailto:support@justlog.ai">support@justlog.ai</a>.</p>
+          <p>For questions about these Terms, email <a href="mailto:support@justlog.live">support@justlog.live</a>.</p>
         </div>
       </div>
 

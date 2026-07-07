@@ -175,7 +175,7 @@ export default function PrivacyPage() {
           <div className="contact-box">
             {[
               ["Name", "Hueness Design Private Limited"],
-              ["Email", "support@justlog.ai"],
+              ["Email", "support@justlog.live"],
               ["Address", "India"],
               ["Response time", "Within 30 days"],
             ].map(([label, value]) => (
@@ -191,7 +191,7 @@ export default function PrivacyPage() {
 
         <div className="section">
           <h2>11. Contact Us</h2>
-          <p>For any privacy questions, email <a href="mailto:support@justlog.ai">support@justlog.ai</a>.</p>
+          <p>For any privacy questions, email <a href="mailto:support@justlog.live">support@justlog.live</a>.</p>
         </div>
       </div>
 
