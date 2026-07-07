@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import FirebaseAnalytics from "@/components/FirebaseAnalytics";
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -60,7 +61,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <FirebaseAnalytics />
+        {children}
+      </body>
     </html>
   );
 }
