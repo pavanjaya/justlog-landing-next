@@ -113,6 +113,7 @@ export default function HomePage() {
         .btn-hero{display:inline-flex;align-items:center;gap:10px;background:#5B21B6;color:#fff;text-decoration:none;padding:18px 36px;border-radius:16px;font-size:17px;font-weight:700;letter-spacing:-.2px;transition:opacity .2s,transform .2s;animation:jlFadeUp .55s cubic-bezier(.16,1,.3,1) .88s both}
         .btn-hero:hover{opacity:.88;transform:translateY(-2px)}
         @keyframes jlFadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+        .hero-visual-wrap{max-width:1100px;margin:0 auto;padding:0}
         .stats-strip{padding:64px 48px;display:flex;gap:16px;max-width:1100px;margin:0 auto}
         .stat-item{flex:1;padding:32px 28px;border-radius:20px;background:#F5F6F3;display:flex;flex-direction:column;gap:12px;transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s ease;cursor:default}
         .stat-icon{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
@@ -192,7 +193,8 @@ export default function HomePage() {
           .hero-sub{font-size:15px;margin-bottom:36px}
           .hero-actions{flex-direction:column;align-items:stretch;gap:10px;margin-bottom:0}
           .btn-hero{width:100%;justify-content:center;padding:17px 24px;font-size:16px}
-          .stats-strip{padding:36px 20px;gap:10px;flex-direction:column}
+          .hero-visual-wrap{padding:0 16px}
+          .stats-strip{padding:36px 20px;gap:10px;display:grid;grid-template-columns:1fr 1fr}
           .stat-item{padding:24px 20px}
           .stat-num{font-size:22px}
           .features-intro{padding:60px 20px 48px}
@@ -231,7 +233,7 @@ export default function HomePage() {
           </div>
           <a href="https://app.justlog.in" target="_blank" rel="noopener noreferrer" style={{display:"block",textAlign:"center",marginTop:16,fontSize:13,fontWeight:500,color:"#888",textDecoration:"none",transition:"color 0.15s"}} onMouseOver={(e)=>(e.currentTarget.style.color="#000")} onMouseOut={(e)=>(e.currentTarget.style.color="#888")}>Try Web App</a>
         </div>
-        <div style={{maxWidth:1100,margin:"0 auto",padding:0}}>
+        <div className="hero-visual-wrap">
           <div style={{borderRadius:28,overflow:"hidden"}}>
             <Image src="/hero-visual.png" alt="Justlog app overview" width={1100} height={700} style={{width:"100%",height:"auto",display:"block"}} priority />
           </div>
