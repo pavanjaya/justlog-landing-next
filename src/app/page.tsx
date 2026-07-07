@@ -195,7 +195,7 @@ export default function HomePage() {
           .stats-strip{padding:36px 20px;gap:10px;flex-direction:column}
           .stat-item{padding:24px 20px}
           .stat-num{font-size:22px}
-          .features-intro{padding:60px 20px 0}
+          .features-intro{padding:60px 20px 48px}
           .feature-row{padding:48px 20px;gap:36px}
           .feature-text h3{font-size:clamp(26px,7vw,34px);letter-spacing:-.5px}
           .how,.categories{padding:60px 20px}
