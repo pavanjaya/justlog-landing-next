@@ -31,7 +31,7 @@ export default function Nav({ variant = "landing" }: { variant?: "landing" | "pa
         }
       `}</style>
       <nav>
-        <Link href="/" className="nav-logo" style={{ textDecoration: "none" }}>
+        <Link href="/" className="nav-logo" style={{ textDecoration: "none" }} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
           <Image src="/logo.svg" alt="Justlog" width={120} height={38} style={{ height: 38, width: "auto" }} />
         </Link>
         {variant === "landing" ? (
