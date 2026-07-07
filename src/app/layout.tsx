@@ -10,6 +10,10 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+    apple: "/favicon.svg",
+  },
   title: "Justlog — Log Money the Way You Talk",
   description: "Track money by typing naturally. No forms, no categories. AI parses your words instantly. Free plan available.",
   keywords: "expense tracker, money tracking app, AI expense tracker, voice expense tracker, personal finance app, budget tracker, justlog",
