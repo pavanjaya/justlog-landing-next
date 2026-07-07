@@ -67,7 +67,7 @@ export default function Footer({ anchors = false }: { anchors?: boolean }) {
           <div className="footer-col">
             <h5>Support</h5>
             <a href={anchors ? "#faq" : "/#faq"}>FAQ</a>
-            <a href="mailto:support@justlog.ai">Contact</a>
+            <Link href="/contact">Contact</Link>
             <Link href="/privacy">Privacy Policy</Link>
             <Link href="/terms">Terms</Link>
           </div>
