@@ -13,14 +13,14 @@ export const metadata: Metadata = {
   title: "Justlog — Log Money the Way You Talk",
   description: "Track money by typing naturally. No forms, no categories. AI parses your words instantly. Free plan available.",
   keywords: "expense tracker, money tracking app, AI expense tracker, voice expense tracker, personal finance app, budget tracker, justlog",
-  metadataBase: new URL("https://justlog.in"),
-  alternates: { canonical: "https://justlog.in" },
+  metadataBase: new URL("https://justlog.live"),
+  alternates: { canonical: "https://justlog.live" },
   openGraph: {
     type: "website",
-    url: "https://justlog.in",
+    url: "https://justlog.live",
     title: "Justlog — Log money the way you talk",
     description: "Just type what you spent. AI figures out the rest. Free to start.",
-    images: [{ url: "https://justlog-website.vercel.app/justlog.png" }],
+    images: [{ url: "https://justlog.live/justlog.png" }],
     siteName: "Justlog",
     locale: "en",
   },
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Justlog — Log money the way you talk",
     description: "Just type what you spent. AI figures out the rest. Free to start.",
-    images: ["https://justlog-website.vercel.app/justlog.png"],
+    images: ["https://justlog.live/justlog.png"],
   },
 };
 
@@ -46,7 +46,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               operatingSystem: "Android, Web",
               applicationCategory: "FinanceApplication",
               description: "AI-powered personal finance journal.",
-              url: "https://justlog.in",
+              url: "https://justlog.live",
               offers: [
                 { "@type": "Offer", price: "0", priceCurrency: "INR", name: "Free Plan" },
                 { "@type": "Offer", price: "299", priceCurrency: "INR", name: "Pro Plan", billingDuration: "P1Y" },

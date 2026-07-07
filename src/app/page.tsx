@@ -231,7 +231,7 @@ export default function HomePage() {
               Get the App, Free
             </Link>
           </div>
-          <a href="https://app.justlog.in" target="_blank" rel="noopener noreferrer" style={{display:"block",textAlign:"center",marginTop:16,fontSize:13,fontWeight:500,color:"#888",textDecoration:"none",transition:"color 0.15s"}} onMouseOver={(e)=>(e.currentTarget.style.color="#000")} onMouseOut={(e)=>(e.currentTarget.style.color="#888")}>Try Web App</a>
+          <a href="https://app.justlog.live" target="_blank" rel="noopener noreferrer" style={{display:"block",textAlign:"center",marginTop:16,fontSize:13,fontWeight:500,color:"#888",textDecoration:"none",transition:"color 0.15s"}} onMouseOver={(e)=>(e.currentTarget.style.color="#000")} onMouseOut={(e)=>(e.currentTarget.style.color="#888")}>Try Web App</a>
         </div>
         <div className="hero-visual-wrap">
           <div style={{borderRadius:28,overflow:"hidden"}}>
@@ -378,7 +378,7 @@ export default function HomePage() {
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 004.561 21h14.878a2 2 0 001.94-1.515L22 17"/></svg>
             Download Now
           </Link>
-          <a href="https://app.justlog.in" className="btn-white-outline" target="_blank" rel="noopener noreferrer">Open Web App →</a>
+          <a href="https://app.justlog.live" className="btn-white-outline" target="_blank" rel="noopener noreferrer">Open Web App →</a>
         </div>
         <p style={{marginTop:20,fontSize:12,color:"rgba(255,255,255,0.25)"}}>iOS coming soon</p>
       </section>
@@ -395,7 +395,7 @@ export default function HomePage() {
               { label:"Getting Started", items:[
                 { q:"Is Justlog free?", a:"Yes the free plan includes one Personal space with unlimited transactions, AI logging, and voice input. Forever free, no time limit. Pro unlocks multiple spaces, Split spaces, AI Search, PDF & CSV export, Story summary and PIN lock." },
                 { q:"Do I need an account?", a:"Yes a free account saves your data and syncs across devices. Sign up with Google or email. Takes about 10 seconds, no billing required." },
-                { q:"Is there a web version?", a:<span>Yes <a href="https://app.justlog.in" target="_blank" rel="noopener noreferrer">app.justlog.in</a> works on any device. iPhone users: open in Safari and tap &ldquo;Add to Home Screen&rdquo; for a full-screen experience. A native iOS app is coming soon.</span> },
+                { q:"Is there a web version?", a:<span>Yes <a href="https://app.justlog.live" target="_blank" rel="noopener noreferrer">app.justlog.live</a> works on any device. iPhone users: open in Safari and tap &ldquo;Add to Home Screen&rdquo; for a full-screen experience. A native iOS app is coming soon.</span> },
               ]},
               { label:"Logging Money", items:[
                 { q:"How does natural language logging work?", a:'Type a description of what you spent in any language. AI reads it, extracts the amount and category, and logs it automatically. "lunch $12" → Food expense, $12. "salary $4500" → Income entry.' },

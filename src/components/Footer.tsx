@@ -74,7 +74,7 @@ export default function Footer({ anchors = false }: { anchors?: boolean }) {
           <div className="footer-col">
             <h5>Download</h5>
             <a href="#">Google Play</a>
-            <a href="https://app.justlog.in" target="_blank" rel="noopener noreferrer">Web App</a>
+            <a href="https://app.justlog.live" target="_blank" rel="noopener noreferrer">Web App</a>
             <a href="#">iOS (soon)</a>
           </div>
         </div>
