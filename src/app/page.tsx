@@ -134,7 +134,7 @@ export default function HomePage() {
         .feature-list-item{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--muted);line-height:1.5}
         .feature-list-item svg{flex-shrink:0;margin-top:2px}
         .feature-visual{flex:1;max-width:440px;display:flex;align-items:center;justify-content:center}
-        .how{background:#F5F6F3;padding:96px 48px;border-top:1px solid #F0F0EE}
+        .how{background:#F5F6F3;padding:96px 48px}
         .how-inner{max-width:960px;margin:0 auto}
         .steps{margin-top:64px;display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:start}
         .step{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 24px}
