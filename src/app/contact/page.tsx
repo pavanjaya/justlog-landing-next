@@ -81,7 +81,7 @@ export default function ContactPage() {
             Get in touch
           </div>
           <h1>We&apos;d love to<br /><em>hear from you.</em></h1>
-          <p className="hero-sub">Whether it&apos;s a bug, a feature idea, or a partnership — we read every message.</p>
+          <p className="hero-sub">Whether it&apos;s a support query, a feature idea, or a partnership — we read every message.</p>
         </div>
       </div>
 
