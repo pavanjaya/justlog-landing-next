@@ -1,5 +1,5 @@
 import { initializeApp, getApps } from "firebase/app";
-import { getAnalytics, isSupported } from "firebase/analytics";
+import { getAnalytics, isSupported, logEvent as fbLogEvent, Analytics } from "firebase/analytics";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDU7AtNdRBRPOzkh1DzsXunBRStvlT4Bmc",
@@ -12,10 +12,21 @@ const firebaseConfig = {
 };
 
 const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
+let analyticsInstance: Analytics | null = null;
 
 export const initAnalytics = async () => {
   if (await isSupported()) {
-    return getAnalytics(app);
+    analyticsInstance = getAnalytics(app);
+    return analyticsInstance;
   }
   return null;
+};
+
+export const logEvent = async (eventName: string, params?: Record<string, unknown>) => {
+  if (!analyticsInstance) {
+    if (await isSupported()) {
+      analyticsInstance = getAnalytics(app);
+    } else return;
+  }
+  fbLogEvent(analyticsInstance, eventName, params);
 };
