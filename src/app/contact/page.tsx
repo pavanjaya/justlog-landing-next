@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { logEvent } from "@/lib/firebase";
 
 export default function ContactPage() {
   const [subject, setSubject] = useState<"support" | "partnership" | "general">("support");
@@ -22,6 +23,7 @@ export default function ContactPage() {
       if (res.ok) {
         setSent(true);
         form.reset();
+        logEvent("contact_form_submit", { subject });
       }
     } finally {
       setLoading(false);

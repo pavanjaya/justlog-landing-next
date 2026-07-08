@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import DownloadPageTracker from "@/components/DownloadPageTracker";
 
 export const metadata: Metadata = {
   title: "Download Justlog",
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
 export default function DownloadPage() {
   return (
     <>
+      <DownloadPageTracker />
       <style>{`
         body { background: #F5F6F3; min-height: 100vh; display: flex; flex-direction: column; }
         .dl-nav {

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect } from "react";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { logEvent } from "@/lib/firebase";
 
 export default function HomePage() {
   useEffect(() => {
@@ -226,7 +227,7 @@ export default function HomePage() {
           <h1>Log money<br/>the way you <em>talk<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" style={{width:"0.45em",height:"0.45em",verticalAlign:"0.15em",display:"inline-block",fill:"#7C3AED",flexShrink:0,marginLeft:"0.08em"}}><path d="M32 4C24.3 4 18 10.3 18 18v14c0 7.7 6.3 14 14 14s14-6.3 14-14V18C46 10.3 39.7 4 32 4z"/><path d="M52 30c-1.1 0-2 .9-2 2 0 9.9-8.1 18-18 18S14 41.9 14 32c0-1.1-.9-2-2-2s-2 .9-2 2c0 11.9 9.1 21.7 20.8 22.8V60h-6.8c-1.1 0-2 .9-2 2s.9 2 2 2h17.9c1.1 0 2-.9 2-2s-.9-2-2-2h-6.8v-5.2C46.9 53.7 56 43.9 56 32c0-1.1-.9-2-2-2z"/></svg>.</em></h1>
           <p className="hero-sub">No forms. No categories. No friction.<br/>Just type what you spent, Justlog understands and handles the rest.</p>
           <div className="hero-actions">
-            <Link href="/download" className="btn-hero">
+            <Link href="/download" className="btn-hero" onClick={() => logEvent("cta_click", { location: "hero" })}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.5 1.5 0 01-.61-1.2V3.014c0-.49.24-.94.609-1.2z" fill="white" opacity="0.9"/><path d="M17.04 8.26l2.2 1.24c1.01.57 1.01 2.43 0 3L17.04 13.74 14.2 12l2.84-3.74z" fill="white"/><path d="M13.792 12L3.609 22.186l10.1-5.686L13.792 12z" fill="white" opacity="0.6"/><path d="M13.792 12l.117-4.5-10.3-5.686L13.792 12z" fill="white" opacity="0.8"/></svg>
               Get the App, Free
             </Link>
@@ -374,7 +375,7 @@ export default function HomePage() {
         <h2>Start logging<br/>today. It&apos;s <em style={{color:"#FACC15"}}>free.</em></h2>
         <p className="cta-p">No credit card. No commitment. Your Personal space is ready the moment you sign up.</p>
         <div className="cta-btns">
-          <Link href="/download" className="btn-white">
+          <Link href="/download" className="btn-white" onClick={() => logEvent("cta_click", { location: "bottom" })}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 004.561 21h14.878a2 2 0 001.94-1.515L22 17"/></svg>
             Download Now
           </Link>
