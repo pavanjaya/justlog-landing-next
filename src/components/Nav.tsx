@@ -15,6 +15,7 @@ export default function Nav({ variant = "landing" }: { variant?: "landing" | "pa
           border-bottom: 1px solid transparent;
           transition: border-color 0.4s ease;
         }
+        .nav-logo { display: inline-flex; align-items: center; }
         .nav-logo img { height: 38px; width: auto; display: block; }
         .nav-links { display: flex; align-items: center; gap: 4px; }
         .nav-links a { font-size: 16px; font-weight: 500; color: var(--muted); text-decoration: none; padding: 8px 16px; border-radius: 10px; transition: color 0.15s, background 0.15s; }
@@ -31,7 +32,7 @@ export default function Nav({ variant = "landing" }: { variant?: "landing" | "pa
         }
       `}</style>
       <nav>
-        <Link href="/" className="nav-logo" style={{ textDecoration: "none" }} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+        <Link href="/" className="nav-logo" style={{ textDecoration: "none" }} onClick={(e) => { if (window.location.pathname === "/") { e.preventDefault(); document.documentElement.scrollTop = 0; document.body.scrollTop = 0; } }}>
           <Image src="/logo.svg" alt="Justlog" width={120} height={38} style={{ height: 38, width: "auto" }} />
         </Link>
         {variant === "landing" ? (
