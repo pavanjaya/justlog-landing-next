@@ -33,7 +33,7 @@ export async function POST(req: NextRequest) {
         : `Thanks for reaching out to JustLog support. We've received your message and will get back to you within 24 hours. We read every message carefully and want to make sure you get the help you need.`;
 
     // Send message to support@justlog.live
-    await fetch("https://api.resend.com/emails", {
+    const inboundRes = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -51,8 +51,14 @@ export async function POST(req: NextRequest) {
       }),
     });
 
+    if (!inboundRes.ok) {
+      const errBody = await inboundRes.text();
+      console.error("Resend inbound error:", inboundRes.status, errBody);
+      return NextResponse.json({ error: "Failed to send message" }, { status: 500 });
+    }
+
     // Send auto-reply to the person who submitted
-    await fetch("https://api.resend.com/emails", {
+    const autoReplyRes = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -103,6 +109,11 @@ export async function POST(req: NextRequest) {
         `.trim(),
       }),
     });
+
+    if (!autoReplyRes.ok) {
+      const errBody = await autoReplyRes.text();
+      console.error("Resend auto-reply error:", autoReplyRes.status, errBody);
+    }
 
     return NextResponse.json({ success: true });
   } catch (err) {
