@@ -1,6 +1,20 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
+
+function NavPageLink() {
+  const pathname = usePathname();
+  const isPrivacy = pathname === "/privacy";
+  return (
+    <Link href={isPrivacy ? "/terms" : "/privacy"} className="nav-link-simple" style={{ display: "flex", alignItems: "center", gap: 6 }}>
+      {isPrivacy ? "Terms of Service" : "Privacy Policy"}
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </Link>
+  );
+}
 
 export default function Nav({ variant = "landing" }: { variant?: "landing" | "page" }) {
   return (
@@ -43,9 +57,7 @@ export default function Nav({ variant = "landing" }: { variant?: "landing" | "pa
             <Link href="/download" className="nav-cta">Get the App</Link>
           </div>
         ) : (
-          <Link href="/privacy" className="nav-link-simple" style={{ display: variant === "page" ? undefined : "none" }}>
-            Privacy Policy →
-          </Link>
+          <NavPageLink />
         )}
       </nav>
     </>
