@@ -46,7 +46,7 @@ export default function TermsPage() {
           </div>
           <h1>Simple, <em>fair</em> terms.</h1>
           <p className="hero-sub">You own your data. We just help you log it.</p>
-          <p className="hero-meta">Last updated: June 18, 2025 · Effective: June 18, 2025</p>
+          <p className="hero-meta">Last updated: June 18, 2026 · Effective: June 18, 2026</p>
         </div>
       </div>
 
