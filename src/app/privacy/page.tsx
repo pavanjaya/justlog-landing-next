@@ -57,7 +57,7 @@ export default function PrivacyPage() {
           </div>
           <h1>Your privacy <em>matters.</em></h1>
           <p className="hero-sub">We keep your financial data private, secure, and fully under your control.</p>
-          <p className="hero-meta">Last updated: June 23, 2025 · Effective: June 23, 2025</p>
+          <p className="hero-meta">Last updated: June 23, 2026 · Effective: June 23, 2026</p>
         </div>
       </div>
 
