@@ -8,6 +8,7 @@ export default function ContactPage() {
   const [subject, setSubject] = useState<"support" | "partnership" | "general">("support");
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -29,7 +30,11 @@ export default function ContactPage() {
         setSent(true);
         form.reset();
         logEvent("contact_form_submit", { subject });
+      } else {
+        setError(true);
       }
+    } catch {
+      setError(true);
     } finally {
       setLoading(false);
     }
@@ -146,6 +151,7 @@ export default function ContactPage() {
               />
             </div>
 
+            {error && <p style={{ color: "#e53e3e", fontSize: 14, marginBottom: 12 }}>Something went wrong. Please try again or email us at support@justlog.live</p>}
             <button type="submit" className="btn-submit" disabled={loading}>
               {loading ? "Sending…" : (
                 <>
