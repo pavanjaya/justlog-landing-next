@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { createClient } from "@supabase/supabase-js";
 
 export async function POST(req: NextRequest) {
   try {
@@ -7,6 +8,16 @@ export async function POST(req: NextRequest) {
     if (!email || !message || !name) {
       return NextResponse.json({ error: "Missing fields" }, { status: 400 });
     }
+
+    // Save to Supabase for admin panel
+    try {
+      const db = createClient(
+        process.env.NEXT_PUBLIC_SUPABASE_URL!,
+        process.env.SUPABASE_SERVICE_ROLE_KEY!,
+        { auth: { autoRefreshToken: false, persistSession: false } },
+      );
+      await db.from("contact_submissions").insert({ name, email, subject_type: subject_type ?? "general", message });
+    } catch { /* non-blocking */ }
 
     const apiKey = process.env.RESEND_API_KEY;
     if (!apiKey) {
