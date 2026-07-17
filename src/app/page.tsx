@@ -1,12 +1,21 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { logEvent } from "@/lib/firebase";
 
 export default function HomePage() {
+  const [isIndia, setIsIndia] = useState(true);
+
+  useEffect(() => {
+    fetch("https://ipapi.co/json/", { signal: AbortSignal.timeout(4000) })
+      .then(r => r.json())
+      .then(d => { if (d.country_code !== "IN") setIsIndia(false); })
+      .catch(() => {});
+  }, []);
+
   useEffect(() => {
     const loadScript = (src: string, id: string) =>
       new Promise<void>((resolve) => {
@@ -359,8 +368,8 @@ export default function HomePage() {
             <div style={{flex:1,minWidth:260,maxWidth:340,background:"#5B21B6",border:"1.5px solid #5B21B6",borderRadius:24,padding:"32px 28px",textAlign:"left",position:"relative"}}>
               <div style={{position:"absolute",top:-12,left:"50%",transform:"translateX(-50%)",background:"#FACC15",color:"#1a1000",fontSize:11,fontWeight:700,padding:"4px 14px",borderRadius:20,letterSpacing:"0.04em",whiteSpace:"nowrap"}}>MOST POPULAR</div>
               <div style={{fontSize:12,fontWeight:700,color:"rgba(255,255,255,0.6)",textTransform:"uppercase",letterSpacing:"0.08em",marginBottom:12}}>Pro</div>
-              <div style={{fontSize:40,fontWeight:900,color:"#fff",letterSpacing:"-1.5px"}}>₹299</div>
-              <div style={{fontSize:13,color:"rgba(255,255,255,0.6)",marginTop:4,marginBottom:24}}>per year · less than ₹1/day</div>
+              <div style={{fontSize:40,fontWeight:900,color:"#fff",letterSpacing:"-1.5px"}}>{isIndia ? "₹299" : "$14.99"}</div>
+              <div style={{fontSize:13,color:"rgba(255,255,255,0.6)",marginTop:4,marginBottom:24}}>{isIndia ? "per year · less than ₹1/day" : "per year · less than $1.25/month"}</div>
               <div style={{display:"flex",flexDirection:"column",gap:10,marginBottom:28}}>
                 {["Everything in Free","Unlimited spaces","Group Split & Shared Space","Story summary","AI Search","PDF & CSV export","PIN lock"].map(t=><div key={t} style={{display:"flex",alignItems:"center",gap:10,fontSize:14,color:"rgba(255,255,255,0.9)"}}>{ckW}{t}</div>)}
               </div>
