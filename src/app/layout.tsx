@@ -38,6 +38,9 @@ export const metadata: Metadata = {
     description: "Just type what you spent. AI figures out the rest. Free to start.",
     images: ["https://justlog.live/justlog.png"],
   },
+  verification: {
+    google: "Tnz0mXckbx001ytJTmYe6M1qTIE5nrQwGlI60sE-Ers",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
