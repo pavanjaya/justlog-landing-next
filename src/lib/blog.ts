@@ -11,17 +11,17 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-    slug: "best-expense-tracker-apps-india-2025",
-    title: "Best Expense Tracker Apps in India 2025",
-    description: "Looking for the best expense tracker app in India? We compared the top apps so you don't have to. Here's what actually works in 2025.",
-    date: "2025-07-10",
+    slug: "best-expense-tracker-apps-india-2026",
+    title: "Best Expense Tracker Apps in India 2026",
+    description: "Looking for the best expense tracker app in India? We compared the top apps so you don't have to. Here's what actually works in 2026.",
+    date: "2026-07-10",
     readTime: "6 min read",
     author: "Justlog Team",
     category: "Reviews",
     content: `
 Managing money in India has never been more important — and never more confusing. Between UPI payments, cash transactions, EMIs, and subscriptions, your money moves in a dozen directions every day. The problem? Most expense tracker apps were built for a different world.
 
-We tested the most popular expense tracker apps available in India in 2025 and here's what we found.
+We tested the most popular expense tracker apps available in India in 2026 and here's what we found.
 
 ## What makes a good expense tracker?
 
@@ -110,7 +110,7 @@ If you want to actually build the habit of tracking expenses — not just instal
     slug: "how-to-track-daily-expenses-without-spreadsheet",
     title: "How to Track Daily Expenses Without a Spreadsheet",
     description: "Spreadsheets are powerful but most people quit them in a week. Here's a simpler way to track your daily expenses that actually sticks.",
-    date: "2025-07-14",
+    date: "2026-07-14",
     readTime: "5 min read",
     author: "Justlog Team",
     category: "Tips",
@@ -207,7 +207,7 @@ Come back tomorrow and log a few more. By the end of the week you'll have a spen
     slug: "30-days-expense-tracking-challenge",
     title: "I Tracked Every Expense for 30 Days. Here's What I Found.",
     description: "What happens when you track every single expense for 30 days? The results were surprising, uncomfortable, and genuinely life-changing.",
-    date: "2025-07-17",
+    date: "2026-07-17",
     readTime: "7 min read",
     author: "Justlog Team",
     category: "Story",
